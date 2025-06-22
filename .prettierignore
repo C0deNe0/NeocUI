@@ -1,0 +1,8 @@
+node_modules
+.next
+out
+public
+coverage
+dist
+*.min.js
+components/ui
