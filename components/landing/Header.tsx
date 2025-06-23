@@ -2,6 +2,8 @@ import { Flame } from 'lucide-react';
 import { Link } from 'next-view-transitions';
 import React from 'react';
 import { Link as ViewTransitionLink } from 'next-view-transitions';
+import { Badge } from '../ui/badge';
+import { ThemeToggle } from '../ui/theme-toggle';
 
 /**
  * Renders the header component for the landing page.
@@ -17,7 +19,8 @@ import { Link as ViewTransitionLink } from 'next-view-transitions';
 const Header = () => {
     return (
         <>
-            {/* header for mobiler */}
+            {/* pro modlie banner */}
+
             <div className="sticky top-0 right-0 left-0 z-50">
                 <div className="w-full bg-white dark:bg-black/5">
                     {/* rest of the header content */}
@@ -50,11 +53,31 @@ const Header = () => {
                                         >
                                             components
                                         </ViewTransitionLink>
+                                        <ViewTransitionLink
+                                            href={
+                                                'docs/components/background-paths'
+                                            }
+                                            className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200"
+                                        >
+                                            Pricing
+                                        </ViewTransitionLink>
+                                        <Link
+                                            href={'#'}
+                                            target="_blank"
+                                            className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-200 flex gap-1"
+                                        >
+                                            Templates
+                                            <Badge variant={'brand'}>new</Badge>
+                                        </Link>
                                     </div>
                                 </div>
                                 {/* right side items */}
-
-                                <div className=""></div>
+                                <div className="hidden sm:flex items-center gap-3">
+                                    <span className="text-zinc-400 dark:text-zinc-500">
+                                        |
+                                    </span>
+                                    <ThemeToggle />
+                                </div>
                             </div>
                         </div>
                     </div>
