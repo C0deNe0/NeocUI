@@ -4,43 +4,61 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { BrowseComponentsButton } from '../ui/browse-button';
 import { BrowseBlocksButton } from '../ui/browse-block';
+import Features from './features';
+// import Tailwind from '../icons/tailwind';
+// import { Sparkles } from 'lucide-react';
 export function HeroSection() {
     return (
         <div className="mx-auto w-full max-w-7xl min-h-screen flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-4  sm:px-6 md:py-6 lg:py-20 ">
             {/* left side - Title and the call to action */}
-
-            <div className="w-full lg:w-[45%] flex-col items-center text-left space-y-8">
+            <div className="w-full lg:w-[45%] flex flex-col items-start text-left space-y-8 ">
                 <motion.div
-                    initial={{ opacity: 0, y: 2 }}
+                    initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h1 className="text-5xl sm:text-6xl lg:text-7xl font-serif tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100 ">
-                        Welcome to{' '}
-                        <span
-                            className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400
-                        dark:from-blue-400 dark:to-teal-500 "
-                        >
-                            Component Library
+                    <h1 className="text-5xl font-mono sm:text-6xl lg:text-6xl font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100">
+                        Craft with{' '}
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-blue-500 dark:from-yellow-400 dark:to-blue-400">
+                            precision
                         </span>
+                        <br />
+                        build with{' '}
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-fuchsia-500 to-rose-500 dark:from-blue-200 dark:via-blue-400 dark:to-yellow-400">
+                            ease
+                        </span>
+                        .
                     </h1>
-
-                    <br />
-                    <p className="text-lg sm:text-xl text-zinc-600 dark:text-zinc-400">
-                        A collection of reusable components for your
+                    <p className="mt-6  md:text-xl text-zinc-700 font-mono lg:text-[16px]/[20px] dark:text-zinc-300 max-w-lg">
+                        A refined collection of{' '}
+                        <span className="font-bold underline decoration-rose-500 decoration-2 dark:decoration-rose-400">
+                            premium UI components
+                        </span>{' '}
+                        crafted with{' '}
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-fuchsia-500 dark:from-rose-400 dark:to-fuchsia-400">
+                            Tailwind CSS
+                        </span>{' '}
+                        and{' '}
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-purple-500 dark:from-fuchsia-400 dark:to-purple-400">
+                            shadcn/ui
+                        </span>{' '}
+                        for modern React and Next.js applications.
                     </p>
-                    <span
-                        className="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400
-                        dark:from-blue-400 dark:to-teal-500 "
-                    >
-                        next project.
-                    </span>
                 </motion.div>
 
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-                    <BrowseComponentsButton />
-                    <BrowseBlocksButton />
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="flex flex-col justify-start w-full"
+                >
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-start gap-3">
+                        <BrowseComponentsButton />
+                        <BrowseBlocksButton />
+                    </div>
+                </motion.div>
+
+                <Features />
             </div>
         </div>
     );
