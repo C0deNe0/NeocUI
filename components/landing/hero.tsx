@@ -35,7 +35,7 @@ export function HeroSection() {
                             premium UI components
                         </span>{' '}
                         crafted with{' '}
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-fuchsia-500 dark:from-rose-400 dark:to-fuchsia-400">
+                        <span className="bg-clip-text text-transparent font-semibold bg-gradient-to-r from-[#ade8f4] via-[#48cae4] to-[#0077b6] dark:from-yellow-300 dark:via-yellow-200 dark:to-blue-500">
                             Tailwind CSS
                         </span>{' '}
                         and{' '}
